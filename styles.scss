@@ -1,0 +1,53 @@
+/* This CSS will print because %message-shared is extended. */
+%message-shared {
+  border: 1px solid #ccc;
+  padding: 10px;
+  color: #333;
+}
+
+// This CSS won't print because %equal-heights is never extended.
+%equal-heights {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.message {
+  @extend %message-shared;
+}
+
+.success {
+  @extend %message-shared;
+  border-color: green;
+  background-color: green;
+}
+
+.error {
+  @extend %message-shared;
+  border-color: red;
+}
+
+.warning {
+  @extend %message-shared;
+  border-color: yellow;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// Find more emojis here...
+// https://www.w3schools.com/charsets/ref_emoji_smileys.asp
+
+.smilies {
+  font-size: 3rem;
+}
+
+$icons: ("wink": "\1F61C", "grin": "\1F600", "cool": "\1F60E");
+
+@each $name, $emoji in $icons {
+  .icon-#{$name}:before {
+    content: $emoji;
+  }
+}

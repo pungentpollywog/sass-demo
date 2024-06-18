@@ -1,0 +1,35 @@
+main article img.doll {
+  width: 20%;
+  height: 20%;
+}
+
+main {
+  height: calc(100vh - 4.25rem);
+  display: flex;
+  align-items: center;
+}
+main article {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+main article img.doll:nth-child(1) {
+  width: 5%;
+  height: 5%;
+}
+main article img.doll:nth-child(2) {
+  width: 10%;
+  height: 10%;
+}
+main article img.doll:nth-child(3) {
+  width: 15%;
+  height: 15%;
+}
+main article img.doll:nth-child(4) {
+  width: 20%;
+  height: 20%;
+}
+main article img.doll:nth-child(5) {
+  width: 25%;
+  height: 25%;
+}/*# sourceMappingURL=dolls.css.map */
