@@ -47,7 +47,17 @@ main {
 $icons: ("wink": "\1F61C", "grin": "\1F600", "cool": "\1F60E");
 
 @each $name, $emoji in $icons {
-  .icon-#{$name}:before {
+  .icon-#{$name}::before {
     content: $emoji;
+  }
+}
+
+$sizes: 40px, 60px, 80px, 100px;
+
+@each $size in $sizes {
+  .icon-#{$size} {
+    font-size: $size;
+    height: $size;
+    width: $size;
   }
 }
